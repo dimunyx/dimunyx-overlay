@@ -24,10 +24,10 @@ std::string get_os() {
     while (std::getline(f, line)) {
         if (line.find("PRETTY_NAME=") == 0) {
 	    auto v = line.substr(12);
-	    while (!v.empty() && (v.back() == '\n' || v.back() == '\r'))
+	    if (!v.empty() && (v.front() == '"' || v.front() == '\''))
+	        v = v.substr(1);
+	    if (!v.empty() && (v.back() == '"' || v.back() == '\''))
 	        v.pop_back();
-	    if (v.size() >= 2 && v.front() == '"' && v.back() == '"')
-	        v = v.substr(1, v.size() - 2);
             if (v == "Arch Linux") {
                 struct utsname u;
                 uname(&u);
@@ -70,9 +70,9 @@ DistroLogo get_distro_logo(const std::string& os) {
 	    "      -odNMMMMMMMMNNmhy+-`           ",
             "    -yNMMMMMMMMMMMNNNmmdhy+-         ",
      	    "  `omMMMMMMMMMMMMNmdmmmmddhhy/`      ",
-            "  omMMMMMMMMMMMNhhyyyohmdddhhhdo`    ",
-            " .ydMMMMMMMMMMdhs++so/smdddhhhhdm+`  ",
-            "  oyhdmNMMMMMMMNdyooydmddddhhhhyhNd. ",
+            "  omMMMMMMMMMMMN      hmdddhhhdo`    ",
+            " .ydMMMMMMMMMMd        mdddhhhhdm+`  ",
+            "  oyhdmNMMMMMMMN     dmddddhhhhyhNd. ",
             "   :oyhhdNNMMMMMMMNNNmmdddhhhhhyymMh ",
             "     .:+sydNMMMMMNNNmmmdddhhhhhhmMmy ",
             "        /mMMMMMMNNNmmmdddhhhhhmMNhs: ",
