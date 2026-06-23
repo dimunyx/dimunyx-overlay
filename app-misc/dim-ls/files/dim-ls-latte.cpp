@@ -76,7 +76,7 @@ static int exit_status = 0;
 static const char *color_reset = "\033[0m";
 
 // -- Foreground colors --
-static const char *color_dir   = "\033[1;38;2;30;102;245m";  // Bold Blue      #1e66f5
+static const char *color_dir   = "\033[1;38;2;32;159;181m";  // Bold Blue      #209fb5
 static const char *color_link  = "\033[1;38;2;114;135;253m";  // Bold Lavender  #7287fd
 static const char *color_exec  = "\033[1;38;2;64;160;43m";  // Bold Green     #40a02b
 static const char *color_fifo  = "\033[38;2;223;142;29m";    // Yellow         #df8e1d
@@ -87,8 +87,8 @@ static const char *color_chr   = "\033[1;38;2;254;100;11m";  // Bold Peach     #
 // -- Background combinations --
 static const char *color_suid  = "\033[1;38;2;76;79;105;48;2;210;15;57m";  // Text on Red    fg:#4c4f69 bg:#d20f39
 static const char *color_sgid  = "\033[1;38;2;239;241;245;48;2;223;142;29m";     // Base on Yellow fg:#eff1f5 bg:#df8e1d
-static const char *color_sticky= "\033[1;38;2;76;79;105;48;2;30;102;245m";  // Text on Blue   fg:#4c4f69 bg:#1e66f5
-static const char *color_ow    = "\033[1;38;2;30;102;245;48;2;64;160;43m";  // Blue on Green  fg:#1e66f5 bg:#40a02b
+static const char *color_sticky= "\033[1;38;2;76;79;105;48;2;32;159;181m";  // Text on Blue   fg:#4c4f69 bg:#209fb5
+static const char *color_ow    = "\033[1;38;2;32;159;181;48;2;64;160;43m";  // Blue on Green  fg:#209fb5 bg:#40a02b
 static const char *color_tw    = "\033[1;38;2;239;241;245;48;2;64;160;43m";     // Base on Green  fg:#eff1f5 bg:#40a02b
 
 static const char *color_git_staged  = "\033[1;38;2;64;160;43m";  // Green
