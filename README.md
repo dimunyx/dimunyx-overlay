@@ -1,30 +1,29 @@
 <div align="center">
-   <br>
-   <img
-       src="assets/gentoo.svg"   
-       width="50"
-       height="50"
-       alt="Home"
-   />
-   <br>
-   <br>
+    <br>
+    <img
+        src="assets/gentoo.svg"   
+        width="50"
+        height="50"
+        alt="Home"
+    />
+    <br>
+    <br>
 
-   **Personal package repository for Gentoo GNU/Linux**
+    **Personal ebuild overlay for Gentoo GNU/Linux**
 
-   <br>
+    <br>
 
-   [![Gentoo GNU/Linux](https://img.shields.io/badge/Gentoo%20Linux?logo=gentoo&logoColor=%23209fb5&link=https%3A%2F%2Fgentoo.org)](https://gentoo.org)
-   [![Last Update](https://img.shields.io/github/last-commit/dimunyx/dimunyx-arch-repo?style=flat-square&color=blueviolet)](https://github.com/dimunyx/dimunyx-arch-repo/commits/main)
+    [![Last Update](https://img.shields.io/github/last-commit/dimunyx/dimunyx-arch-repo?style=flat-square&color=blueviolet)](https://github.com/dimunyx/dimunyx-arch-repo/commits/main)
 
-   <br>
-   <br>
+    <br>
+    <br>
 </div>
 
 ## About
 
-This repository contains packages made by dimunyx, and **PKGBUILD** for Arch Linux. \
-Packages can be installed directly via `pacman` by adding the repository to your pacman configuration. \
-P.S: Soon will be added manual installation via `compiling`.
+This repository contains ebuilds written by dimunyx, for Gentoo GNU/Linux. \
+Packages can be emerged via `portage` by adding the overlay to your portage repos.conf. \
+P.S: Soon will be added `eselect repository` overlay.
 
 ---
 
@@ -58,7 +57,7 @@ emaint sync -r dimunyx-overlay (with sudo/doas)
 ### 3. Install a package
 
 ```bash
-emerge -(your flags) <package-name> (with sudo/doas)
+emerge <package-name> (with sudo/doas)
 ```
 
 ## Support
