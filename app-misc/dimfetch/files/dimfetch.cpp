@@ -118,11 +118,11 @@ int main(int argc, char* argv[]) {
         std::string arg = argv[1];
         if (arg == "--help") {
             std::cout << "Usage: " << argv[0] << " [--help] [-v | --version]\n";
-            std::cout << "A system information tool (neofetch clone)\n";
             return 0;
         }
         if (arg == "-v" || arg == "--version") {
             std::cout << "dimfetch 0.3\n";
+	    std::cout << "Minimalistic fetch written in C++\n";
             return 0;
         }
     }
