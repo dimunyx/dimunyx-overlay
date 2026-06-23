@@ -62,6 +62,27 @@ DistroLogo get_distro_logo(const std::string& os) {
             Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan
         }};
     }
+    if (os.find("Gentoo") != std::string::npos) {
+	return {{
+	    "          -/oyddmdhs+:.              "
+	    "      -odNMMMMMMMMNNmhy+-`           "
+            "    -yNMMMMMMMMMMMNNNmmdhy+-         "
+     	    "  `omMMMMMMMMMMMMNmdmmmmddhhy/`      "
+            "  omMMMMMMMMMMMNhhyyyohmdddhhhdo`    "
+            " .ydMMMMMMMMMMdhs++so/smdddhhhhdm+`  "
+            "  oyhdmNMMMMMMMNdyooydmddddhhhhyhNd. "
+            "   :oyhhdNNMMMMMMMNNNmmdddhhhhhyymMh "
+            "     .:+sydNMMMMMNNNmmmdddhhhhhhmMmy "
+            "        /mMMMMMMNNNmmmdddhhhhhmMNhs: "
+            "     `oNMMMMMMMNNNmmmddddhhdmMNhs+`  "
+            "   `sNMMMMMMMMNNNmmmdddddmNMmhs/.    "
+            "  /NMMMMMMMMNNNNmmmdddmNMNdso:`      "
+            " +MMMMMMMNNNNNmmmmdmNMNdso/-         "
+            " yMMNNNNNNNmmmmmNNMmhs+/-`           "
+            " /hMMNNNNNNNNMNdhs++/-`              "
+            " `/ohdmmddhys+++/:.`                 "
+            "   `-//////:--.                      "
+                                      
     return {{
         "       ____       ",
         "    __/  /_       ",
