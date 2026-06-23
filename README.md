@@ -9,14 +9,14 @@
     <br>
     <br>
 
-    **Personal ebuild overlay for Gentoo GNU/Linux**
+**Personal ebuild overlay for Gentoo GNU/Linux**
 
-    <br>
+<br>
 
-    [![Last Update](https://img.shields.io/github/last-commit/dimunyx/dimunyx-arch-repo?style=flat-square&color=blueviolet)](https://github.com/dimunyx/dimunyx-arch-repo/commits/main)
+[![Last Update](https://img.shields.io/github/last-commit/dimunyx/dimunyx-arch-repo?style=flat-square&color=blueviolet)](https://github.com/dimunyx/dimunyx-arch-repo/commits/main)
 
-    <br>
-    <br>
+<br>
+<br>
 </div>
 
 ## About
