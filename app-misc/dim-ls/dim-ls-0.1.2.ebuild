@@ -11,10 +11,16 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
+IUSE="icons"
+
 S="${WORKDIR}"
 
 src_unpack() {
-	cp "${FILESDIR}/dim-ls.cpp" "${S}"/
+	if use icons; then
+		cp "${FILESDIR}/dim-ls.cpp" "${S}"/dim-ls.cpp
+	else
+		cp "${FILESDIR}/dim-ls-noicons.cpp" "${S}"/dim-ls.cpp
+	fi
 }
 
 src_compile() {
