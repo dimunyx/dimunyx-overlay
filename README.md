@@ -23,7 +23,13 @@
 
 This overlay contains ebuilds written by dimunyx, for Gentoo GNU/Linux. \
 Packages can be emerged via `portage` by adding the overlay to your portage repos.conf. \
-P.S: Soon will be added `eselect repository` overlay.
+
+---
+
+## Todo
+
+- [ ] Add `eselect repository` support to the overlay.
+- [ ] Add some new packages.
 
 ---
 
