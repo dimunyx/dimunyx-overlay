@@ -23,7 +23,11 @@ std::string get_os() {
     std::string line;
     while (std::getline(f, line)) {
         if (line.find("PRETTY_NAME=") == 0) {
-            auto v = line.substr(12);
+	    auto v = line.substr(12);
+             while (!v.empty() && (v.back() == '\n' || v.back() == '\r'))
+                 v.pop_back();
+                     if (v.front() == '"' && v.back() == '"')
+                         v = v.substr(1, v.size() - 2);
             if (v.front() == '"' && v.back() == '"')
                 v = v.substr(1, v.size() - 2);
             if (v == "Arch Linux") {
@@ -64,24 +68,24 @@ DistroLogo get_distro_logo(const std::string& os) {
     }
     if (os.find("Gentoo") != std::string::npos) {
 	return {{
-	    "          -/oyddmdhs+:.              "
-	    "      -odNMMMMMMMMNNmhy+-`           "
-            "    -yNMMMMMMMMMMMNNNmmdhy+-         "
-     	    "  `omMMMMMMMMMMMMNmdmmmmddhhy/`      "
-            "  omMMMMMMMMMMMNhhyyyohmdddhhhdo`    "
-            " .ydMMMMMMMMMMdhs++so/smdddhhhhdm+`  "
-            "  oyhdmNMMMMMMMNdyooydmddddhhhhyhNd. "
-            "   :oyhhdNNMMMMMMMNNNmmdddhhhhhyymMh "
-            "     .:+sydNMMMMMNNNmmmdddhhhhhhmMmy "
-            "        /mMMMMMMNNNmmmdddhhhhhmMNhs: "
-            "     `oNMMMMMMMNNNmmmddddhhdmMNhs+`  "
-            "   `sNMMMMMMMMNNNmmmdddddmNMmhs/.    "
-            "  /NMMMMMMMMNNNNmmmdddmNMNdso:`      "
-            " +MMMMMMMNNNNNmmmmdmNMNdso/-         "
-            " yMMNNNNNNNmmmmmNNMmhs+/-`           "
-            " /hMMNNNNNNNNMNdhs++/-`              "
-            " `/ohdmmddhys+++/:.`                 "
-            "   `-//////:--.                      "
+	    "          -/oyddmdhs+:.              ",
+	    "      -odNMMMMMMMMNNmhy+-`           ",
+            "    -yNMMMMMMMMMMMNNNmmdhy+-         ",
+     	    "  `omMMMMMMMMMMMMNmdmmmmddhhy/`      ",
+            "  omMMMMMMMMMMMNhhyyyohmdddhhhdo`    ",
+            " .ydMMMMMMMMMMdhs++so/smdddhhhhdm+`  ",
+            "  oyhdmNMMMMMMMNdyooydmddddhhhhyhNd. ",
+            "   :oyhhdNNMMMMMMMNNNmmdddhhhhhyymMh ",
+            "     .:+sydNMMMMMNNNmmmdddhhhhhhmMmy ",
+            "        /mMMMMMMNNNmmmdddhhhhhmMNhs: ",
+            "     `oNMMMMMMMNNNmmmddddhhdmMNhs+`  ",
+            "   `sNMMMMMMMMNNNmmmdddddmNMmhs/.    ",
+            "  /NMMMMMMMMNNNNmmmdddmNMNdso:`      ",
+            " +MMMMMMMNNNNNmmmmdmNMNdso/-         ",
+            " yMMNNNNNNNmmmmmNNMmhs+/-`           ",
+            " /hMMNNNNNNNNMNdhs++/-`              ",
+            " `/ohdmmddhys+++/:.`                 ",
+            "   `-//////:--.                      ",
 	}, {
 	    Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan
 	}};
