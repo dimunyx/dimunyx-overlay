@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="icons catppuccin-mocha catppuccin-macchiato catppuccin-frappe catppuccin-latte"
+IUSE="icons +catppuccin-mocha catppuccin-macchiato catppuccin-frappe catppuccin-latte"
 REQUIRED_USE="^^ ( catppuccin-mocha catppuccin-macchiato catppuccin-frappe catppuccin-latte )"
 
 S="${WORKDIR}"
