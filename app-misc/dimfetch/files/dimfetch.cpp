@@ -116,8 +116,8 @@ void print_logo() {
 int main(int argc, char* argv[]) {
     if (argc > 1) {
         std::string arg = argv[1];
-        if (arg == "--help") {
-            std::cout << "Usage: " << argv[0] << " [--help] [-v | --version]\n";
+        if (arg == "-h" || arg == "--help") {
+            std::cout << "Usage: " << argv[0] << " [-h | --help] [-v | --version]\n";
             return 0;
         }
         if (arg == "-v" || arg == "--version") {
