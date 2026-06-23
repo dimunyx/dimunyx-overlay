@@ -24,12 +24,10 @@ std::string get_os() {
     while (std::getline(f, line)) {
         if (line.find("PRETTY_NAME=") == 0) {
 	    auto v = line.substr(12);
-             while (!v.empty() && (v.back() == '\n' || v.back() == '\r'))
-                 v.pop_back();
-                     if (v.front() == '"' && v.back() == '"')
-                         v = v.substr(1, v.size() - 2);
-            if (v.front() == '"' && v.back() == '"')
-                v = v.substr(1, v.size() - 2);
+	    while (!v.empty() && (v.back() == '\n' || v.back() == '\r' || v.back() == '"'))
+	        v.pop_back();
+	    if (v.front() == '"')
+	        v = v.substr(1);
             if (v == "Arch Linux") {
                 struct utsname u;
                 uname(&u);
