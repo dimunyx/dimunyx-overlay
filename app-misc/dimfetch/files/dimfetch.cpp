@@ -82,7 +82,10 @@ DistroLogo get_distro_logo(const std::string& os) {
             " /hMMNNNNNNNNMNdhs++/-`              "
             " `/ohdmmddhys+++/:.`                 "
             "   `-//////:--.                      "
-                                      
+	}, {
+	    Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan, Color::cyan
+	}};
+    }
     return {{
         "       ____       ",
         "    __/  /_       ",
