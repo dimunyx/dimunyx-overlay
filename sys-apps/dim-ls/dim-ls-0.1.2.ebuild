@@ -1,4 +1,4 @@
-# Copyright 2026-2026 dimunyx Authors
+# Copyright 2026 dimunyx Authors
 # Distributed under the terms of the GNU General Public License v3
 
 EAPI=8
