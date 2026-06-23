@@ -29,4 +29,6 @@ src_compile() {
 
 src_install() {
 	dobin dim-ls
+	insinto /usr/share/fish/vendor_completions.d
+	doins "${FILESDIR}/dim-ls.fish"
 }
