@@ -24,7 +24,7 @@ src_unpack() {
 }
 
 src_compile() {
-	${CXX} dim-ls.cpp ${CXX_FLAGS} -o dim-ls
+	${CXX} ${CXXFLAGS} dim-ls.cpp -o dim-ls
 }
 
 src_install() {
