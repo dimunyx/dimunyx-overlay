@@ -121,7 +121,7 @@ int main(int argc, char* argv[]) {
             return 0;
         }
         if (arg == "-v" || arg == "--version") {
-            std::cout << "dimfetch 0.3\n";
+            std::cout << "dimfetch 0.3.1\n";
 	    std::cout << "Minimalistic fetch written in C++\n";
             return 0;
         }

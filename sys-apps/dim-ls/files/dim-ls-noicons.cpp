@@ -904,7 +904,7 @@ int main(int argc, char *argv[]) {
             case 't': sort_by = SortBy::time; break;
             case 'U': sort_by = SortBy::none; break;
             case 'u': time_type = TimeType::atime; break;
-            case 'v': std::cout << "dim-ls 0.1.2\n"; return 0;
+            case 'v': std::cout << "dim-ls 0.1.3\n"; return 0;
             case 'w': line_length = std::stoul(optarg); break;
             case 'x': format = Format::horizontal; break;
             case 'X': sort_by = SortBy::extension; break;
@@ -967,7 +967,7 @@ int main(int argc, char *argv[]) {
             case 267: break;
             case 268: break;
             case 271: break;
-            case 272: std::cout << "dim-ls 0.1.2\n"; return 0;
+            case 272: std::cout << "dim-ls 0.1.3\n"; return 0;
             default: print_usage(); return 1;
         }
     }

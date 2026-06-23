@@ -1267,7 +1267,7 @@ int main(int argc, char *argv[]) {
             case 'U': sort_by = SortBy::none; break;
             case 'u': time_type = TimeType::atime; break;
             case 'v':
-                std::cout << "dim-ls 0.1.2\n";
+                std::cout << "dim-ls 0.1.3\n";
                 return 0;
             case 'w':
                 line_length = std::stoul(optarg);
@@ -1316,7 +1316,7 @@ int main(int argc, char *argv[]) {
             case 273: show_git_status = true; break;
             case 274: tree_view = true; break;
             case 272:
-                std::cout << "dim-ls 0.1.2\n";
+                std::cout << "dim-ls 0.1.3\n";
                 return 0;
             default:
                 std::cerr << "Try 'dim-ls --help' for more information.\n";
