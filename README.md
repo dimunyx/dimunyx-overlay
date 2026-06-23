@@ -7,15 +7,10 @@
         alt="Home"
     />
     <br>
-    <br>
+<br>
 
 **Personal ebuild overlay for Gentoo GNU/Linux**
 
-<br>
-
-[![Last Update](https://img.shields.io/github/last-commit/dimunyx/dimunyx-arch-repo?style=flat-square&color=blueviolet)](https://github.com/dimunyx/dimunyx-arch-repo/commits/main)
-
-<br>
 <br>
 </div>
 
