@@ -28,7 +28,7 @@ Packages can be emerged via `portage` by adding the overlay to your portage repo
 
 ## Todo
 
-- [x] Add `eselect repository` support to the overlay.
+- [ ] Add `eselect repository` support to the overlay.
 - [ ] Add some new packages.
 
 ---
