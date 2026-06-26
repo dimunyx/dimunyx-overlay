@@ -3,26 +3,25 @@
 
 EAPI=8
 
-DESCRIPTION="A ls fork written on C++ with icons and colors"
+DESCRIPTION="A ls fork written in C++ with icons and colors"
 HOMEPAGE="https://github.com/dimunyx/dimunyx-overlay"
-SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}"
+S="${WORKDIR}/dim-ls-0.1.3"
 
 src_unpack() {
-	cp "${FILESDIR}/${src}" "${S}"/dim-ls.cpp
+	cp -r "${FILESDIR}/dim-ls-0.1.3" "${WORKDIR}" || die
 }
 
 src_compile() {
-	${CXX} ${CXXFLAGS} dim-ls.cpp -o dim-ls
+    ${CXX} ${CXXFLAGS} main.cpp -o dim-ls || die
 }
 
 src_install() {
-	dobin dim-ls
-	insinto /usr/share/fish/vendor_completions.d
-	doins "${FILESDIR}/dim-ls.fish"
+    dobin dim-ls
+    insinto /usr/share/fish/vendor_completions.d
+    doins "${FILESDIR}/dim-ls-0.1.3/dim-ls.fish"
 }
