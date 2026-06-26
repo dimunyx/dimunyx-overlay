@@ -26,5 +26,5 @@ src_compile() {
 src_install() {
 	dobin dist/dimfetch
 	insinto /usr/share/fish/vendor_completions.d
-	doins "${FILESDIR}/dimfetch.fish"
+	doins "${FILESDIR}/dimfetch-0.3.2/dimfetch.fish"
 }
