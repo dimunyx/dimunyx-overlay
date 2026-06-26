@@ -9,6 +9,6 @@
 		Minimalistic fetch written in C++
 	</longdescription>
 	<upstream>
-		<remote-id type="github">dimunyx/dimfetch</remote-id>
+		<remote-id type="github">dimunyx/dimunyx-overlay</remote-id>
 	</upstream>
 </pkgmetadata>
