@@ -23,8 +23,9 @@ Packages can be emerged via `portage` by adding the overlay to your portage repo
 
 ## Todo
 
-- [ ] Add `eselect repository` support to the overlay.
+- [ ] Add `eselect repository` support to the overlay. (PR is pending)
 - [ ] Add some new packages.
+- [x] Update dimfetch
 
 ---
 
@@ -33,7 +34,7 @@ Packages can be emerged via `portage` by adding the overlay to your portage repo
 | Package  | Category | Version | Description                                    |
 |----------|----------|---------|------------------------------------------------|
 | dim-ls   | sys-apps |  0.1.3  | A ls fork written on C++ with icons and colors |
-| dimfetch | app-misc |  0.3.1  | Minimalistic fetch written in C++              |
+| dimfetch | app-misc |  0.3.2  | Minimalistic fetch written in C++              |
 
 ---
 

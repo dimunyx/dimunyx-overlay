@@ -11,19 +11,20 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/dimfetch-0.3.1"
+S="${WORKDIR}/dimfetch-0.3.2"
 
 src_unpack() {
-    mkdir -p "${S}" || die
-    cp "${FILESDIR}/dimfetch-0.3.1/main.cpp" "${S}/" || die
+    cp -r "${FILESDIR}/dimfetch-0.3.2" "${WORKDIR}" || die
 }
 
+S="${WORKDIR}/dimfetch-0.3.2"
+
 src_compile() {
-    ${CXX} ${CXXFLAGS} "${S}/main.cpp" -o dimfetch
+    make build
 }
 
 src_install() {
-	dobin dimfetch
+	dobin dist/dimfetch
 	insinto /usr/share/fish/vendor_completions.d
-	doins "${FILESDIR}/dimfetch-0.3.1/dimfetch.fish"
+	doins "${FILESDIR}/dimfetch.fish"
 }
