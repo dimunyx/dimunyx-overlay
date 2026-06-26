@@ -11,20 +11,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="icons catppuccin-mocha catppuccin-macchiato catppuccin-frappe catppuccin-latte"
-
 S="${WORKDIR}"
 
 src_unpack() {
-	local src
-	if use icons; then
-		src="dim-ls.cpp"
-		use catppuccin-macchiato && src="dim-ls-macchiato.cpp"
-		use catppuccin-frappe && src="dim-ls-frappe.cpp"
-		use catppuccin-latte && src="dim-ls-latte.cpp"
-	else
-		src="dim-ls-noicons.cpp"
-	fi
 	cp "${FILESDIR}/${src}" "${S}"/dim-ls.cpp
 }
 
