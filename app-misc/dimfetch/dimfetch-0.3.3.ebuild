@@ -10,24 +10,33 @@ SRC_URI=""
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="x11"
 
 DEPEND="
 	sys-devel/gcc
 	dev-build/make
 "
 
+RDEPEND="
+	x11-misc/read-edid
+	sys-apps/pciutils
+	x11? (
+		x11-misc/wmctrl
+	)
+"
+
 S="${WORKDIR}"
 
 src_unpack() {
-	unpack "${FILESDIR}/dimfetch-0.3.1.tar.gz"
+    unpack "${FILESDIR}/dimfetch-0.3.3.tar.gz"
 }
 
 src_compile() {
-	make build
+    make build
 }
 
 src_install() {
-	dobin dist/dimfetch
+    dobin dist/dimfetch
 	insinto /usr/share/fish/vendor_completions.d
 	doins "dimfetch.fish"
 }

@@ -4,20 +4,27 @@
 EAPI=8
 
 DESCRIPTION="Minimalistic fetch written in C++"
-HOMEPAGE="https://github.com/dimunyx/dimunyx-overlay"
+HOMEPAGE="https://github.com/dimunyx/dimfetch"
 SRC_URI=""
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/dimfetch-0.3.2"
+DEPEND="
+	sys-devel/gcc
+	dev-build/make
+"
+
+RDEPEND="
+	x11-misc/read-edid
+"
+
+S="${WORKDIR}"
 
 src_unpack() {
-    cp -r "${FILESDIR}/dimfetch-0.3.2" "${WORKDIR}" || die
+	unpack "${FILESDIR}/dimfetch-0.3.2.tar.gz"
 }
-
-S="${WORKDIR}/dimfetch-0.3.2"
 
 src_compile() {
     make build
@@ -26,5 +33,5 @@ src_compile() {
 src_install() {
 	dobin dist/dimfetch
 	insinto /usr/share/fish/vendor_completions.d
-	doins "${FILESDIR}/dimfetch-0.3.2/dimfetch.fish"
+	doins dimfetch.fish
 }
