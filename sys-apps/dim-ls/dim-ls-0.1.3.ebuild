@@ -10,18 +10,18 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/dim-ls-0.1.3"
+S="${WORKDIR}"
 
 src_unpack() {
-	cp -r "${FILESDIR}/dim-ls-0.1.3" "${WORKDIR}" || die
+	unpack "${FILESDIR}/dim-ls-0.1.3.tar.gz"
 }
 
 src_compile() {
-    ${CXX} ${CXXFLAGS} main.cpp -o dim-ls || die
+	make build
 }
 
 src_install() {
-    dobin dim-ls
+    dobin dist/dim-ls
     insinto /usr/share/fish/vendor_completions.d
-    doins "${FILESDIR}/dim-ls-0.1.3/dim-ls.fish"
+    doins "dim-ls.fish"
 }
