@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="Minimalistic fetch written in C++"
 HOMEPAGE="https://github.com/dimunyx/dimfetch"
-SRC_URI=""
+SRC_URI="https://raw.githubusercontent.com/dimunyx/dimfetch/main/archives/dimfetch-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -29,10 +29,6 @@ RDEPEND="
 "
 
 S="${WORKDIR}"
-
-src_unpack() {
-    unpack "${FILESDIR}/dimfetch-0.3.4.tar.gz"
-}
 
 src_compile() {
     make build
